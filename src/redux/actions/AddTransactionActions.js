@@ -47,7 +47,7 @@ export function addTransaction(transaction, userID) {
 				return dispatch(getManualTrans(userID));
 			})
 			.catch(error => {
-				dispatch(addTransactionFailure(error.response.data.message));
+				dispatch(addTransactionFailure(error.response.data.message)); //I: There's no return in this catch, so I wonder what this does if theres an error...
 			});
 	};
 }

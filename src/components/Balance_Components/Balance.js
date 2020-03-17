@@ -16,6 +16,8 @@ export const Balance = ({ LinkedAccount }) => {
         </Card>
         )
     }else{
+        // I: Is this supposed to do something? Maybe it wasn't completed... 
+        //looks like a <p> as a placeholder instead of actual account balance data from Plaid
         return (
             <p></p>
         )

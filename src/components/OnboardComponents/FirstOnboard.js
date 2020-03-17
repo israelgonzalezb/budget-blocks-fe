@@ -6,6 +6,9 @@ import { addDefault } from "../../redux/actions/ManualActions";
 import Loader from 'react-loader-spinner'
 import { loginUser } from "../../redux/actions/LoginActions";
 
+/*I: It appears that this component is supposed to render if the user hasn't completed onboarding,
+    renders on "/onboard/1" */
+
 const FirstOnboard = props => {
     
     const handleClick = (e) =>{
@@ -14,8 +17,11 @@ const FirstOnboard = props => {
     }
     useEffect(() => {
         
-props.loginUser({email:localStorage.getItem("email"),password:localStorage.getItem("password")},props.history)
+props.loginUser({email:localStorage.getItem("email"),password:localStorage.getItem("password")},props.history) 
+//I: Uh, we probably don't want the user's password in localStorage...there doesn't even seem to be any encryption done to it!!
     },[])
+
+    // I: Really nasty use of ternary here... makes this code almost unreadable
     return (
         
        <div>

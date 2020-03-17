@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const BudgetGoal = props => {
+//I: Used in TotalBudget component
+
+const BudgetGoal = props => { //I: This component has a variable in its scope with the same name... not good practice, want to refactor
 	const BudgetGoal = (
 		Math.round(
 			100 *

@@ -9,9 +9,10 @@ import DisplayBlocks from './DisplayBlocks';
 import './index.css';
 import Table from '@material-ui/core/Table';
 import TableContainer from '@material-ui/core/TableContainer';
-import Paper from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper'; //I: Looks like a basic container https://material-ui.com/api/paper/
 
 import  BudgetGoal  from '../Modal_Components/BudgetGoalModal';
+//I: Custom modal using material ui components, allows user to change budget goals
 
 export function ManualBlocks(props) {
 	const [open, setOpen] = useState(false);
@@ -42,7 +43,7 @@ export function ManualBlocks(props) {
 					<h1>Create Your Budget Blocks</h1>
 					<p>Assign the value you want in each selected category.</p>
 				</div>
-				<TableContainer className='table' component={Paper}>
+				<TableContainer className='table' component={Paper}> {/* I: Material UI component https://material-ui.com/api/table-container/ */}
 					<Table className='table-content'>
 						
 						<TableHeads
@@ -54,7 +55,7 @@ export function ManualBlocks(props) {
 							arr={props.categoryArr}
 							handleClick={handleClickOpen}
 							LinkedAccount={props.LinkedAccount}
-						/>
+						/> {/*I: Custom component based on a basic table, takes array and renders table from that array */}
 					</Table>
 					<BudgetGoal open={open} values={values} handleClose={handleClose} />
 				</TableContainer>
@@ -67,7 +68,7 @@ export function ManualBlocks(props) {
 					<Back_Continue 
 					BackClick={()=>props.history.push("/onBoard/select")}
 					ContClick={()=>props.history.push("/dashboard")}
-					/>
+					/>{/*I: Custom component based on dialog actions material ui components */}
 				</div>
 			</div>
 		</div>

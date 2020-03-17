@@ -36,7 +36,7 @@ export function sendLinkToken(token, userID) {
     dispatch(sendLinkLoading());
     return axiosWithAuth()
       .post(
-        "https://cors-anywhere.herokuapp.com/https://lambda-budget-blocks.herokuapp.com/plaid/token_exchange",
+        "https://cors-anywhere.herokuapp.com/https://lambda-budget-blocks.herokuapp.com/plaid/token_exchange", //I: Pretty cool tool http://cors-anywhere.herokuapp.com/ ... is it safe for bank info??
         { publicToken: token, userid: userID }
       )
       .then(response => {

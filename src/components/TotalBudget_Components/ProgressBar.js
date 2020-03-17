@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 
+//I: Used in TotalBudget, uses css classes defined in ./index.css which is imported by the parent container
+
 const ProgressBar = ({ done }) => {
 	const [style, setStyle] = useState({});
 	setTimeout(() => {

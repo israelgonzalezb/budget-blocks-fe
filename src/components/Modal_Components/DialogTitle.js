@@ -7,6 +7,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 
+//I: Used in ModalTitle component
+
 export const DialogTitle = withStyles(styles)(props => {
     const { children, classes, onClose, ...other } = props;
     return (

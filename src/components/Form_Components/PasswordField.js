@@ -7,6 +7,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
+// I: This component controls the little visibility button on password input fields
+// https://material-ui.com/components/text-fields/#input-adornments
+
 const PasswordField = ({ name, placeholder, label, value, handleChange, error, helperText }) =>{
 
     const [ viewPass, setViewPass] = useState(false)

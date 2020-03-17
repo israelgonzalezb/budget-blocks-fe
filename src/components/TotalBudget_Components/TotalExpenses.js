@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+//I: used in TotalBudget, this component looks very similar to its sibling BudgetGoal component
+
 const TotalExpenses = props => {
     
     const TotalExpenses = (

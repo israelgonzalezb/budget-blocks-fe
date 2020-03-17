@@ -2,6 +2,9 @@ import React from "react";
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 
+//I: Used in Dashboard component
+// Renders react-loader-spinner component if current state of app is "fetching", i.e. loading some api response
+
 export const Loading = props => {
 	return (
 		<div id='loading'>

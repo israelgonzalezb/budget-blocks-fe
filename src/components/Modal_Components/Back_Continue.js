@@ -3,6 +3,9 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 
+//I: Used in ManualBlocks component
+// Used in BudgetGoalModal component
+
 export const Back_Continue = ({BackClick, ContClick}) =>{
     
     const DialogActions = withStyles(theme => ({

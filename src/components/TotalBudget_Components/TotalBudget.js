@@ -39,6 +39,7 @@ const TotalBudget = props => {
 };
 
 function mapStateToProps(state) {
+	// I: Some of these calculations might be better to do on the backend...
 	return {
 		budget: state.plaidReducer.categories.map(
 			i => Math.round(100 * i.budget) / 100

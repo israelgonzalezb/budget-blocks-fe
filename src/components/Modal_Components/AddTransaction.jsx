@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Back_Continue } from "./Back_Continue";
 import { Modal_Title } from "./Modal_Title";
-import MuiDialogActions from "@material-ui/core/DialogActions";
+import MuiDialogActions from "@material-ui/core/DialogActions"; //I: https://material-ui.com/api/dialog-actions/
+//I: This component is is hooked up to the withStyles hook and is used as DialogActions
 
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import MuiDialogContent from "@material-ui/core/DialogContent";
+import MuiDialogContent from "@material-ui/core/DialogContent"; //I: https://material-ui.com/api/dialog-content/
+//I: This component is is hooked up to the withStyles hook and is used as DialogContent
+
 import { connect } from "react-redux";
 
 import FormControl from "@material-ui/core/FormControl";
@@ -15,6 +18,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import { addTransaction } from "../../redux/actions/AddTransactionActions";
 import "./modalStyle.css";
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
@@ -27,16 +31,20 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const DialogContent = withStyles(theme => ({
+  //I: withStyles is used to override classes and styles for a nested element, https://material-ui.com/styles/advanced/#withstyles
   root: {
     padding: theme.spacing(2)
   }
 }))(MuiDialogContent);
+
 const DialogActions = withStyles(theme => ({
   root: {
     margin: 0,
     padding: theme.spacing(1)
   }
 }))(MuiDialogActions);
+
+
 export const AddTransaction = props => {
   const [open, setOpen] = useState(false);
   const [categories, setCategories] = useState("");
@@ -46,7 +54,10 @@ export const AddTransaction = props => {
     payment_date: createCurrentDate(),
     category_id: ""
   });
-  const inputLabel = React.useRef(null);
+  // I: The code below looks like it was written by a completely different person... "React.useState"? It's a named import...
+  const inputLabel = React.useRef(null); 
+  //I: useRef creates a "container" for a component/object which can be referenced later on
+  // https://reactjs.org/docs/hooks-reference.html#useref
   const [labelWidth, setLabelWidth] = React.useState(2012);
   React.useEffect(() => {
     setLabelWidth(100);
@@ -57,6 +68,7 @@ export const AddTransaction = props => {
       category_id: ""
     });
   }, [props.open]);
+
   const classes = useStyles();
 
   const handleClose = () => {
@@ -186,6 +198,8 @@ function mapStateToProps(state) {
   };
 }
 
+
+//I: date-fns is one of the dependencies but it looks like it wasn't used here, can prob be refactored: https://date-fns.org/
 function createCurrentDate(){
   const date = new Date();
   function month(){

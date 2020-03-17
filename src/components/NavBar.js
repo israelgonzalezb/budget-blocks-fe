@@ -16,6 +16,7 @@ export function NavBar({navState,logoutUser}) {
 				<img className='heading' src={head} />
 			</div>
 			<div className='nav-action'>
+				{/*I: Ternary render depending on login state... should clean this up */}
 				{ (navState==="")?
 				"":<Link onClick={logoutUser} to='/login'>
 					Log Out

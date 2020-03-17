@@ -5,7 +5,7 @@ import { selectCategories } from "../../../redux/actions/ManualActions";
 
 export function SelectCategories({categoryArr, selectCategories, history}) {
   const [values, setValues] = useState(mapCategoriesToValues(categoryArr));
-  const [error, setError]= useState('');
+  const [error, setError]= useState(''); //I: error is rendered on line 51, updated by the submit button if the user didn't select any categories
  
   const handleChange = event => {
     setValues({
@@ -62,7 +62,7 @@ function mapStateToProps(state){
     }
 }
 
-function mapCategoriesToValues(arr){
+function mapCategoriesToValues(arr){ //I: Very cool, they mimicked the mapStateToProps pattern for something completely different...
     let valueObj = {};
     arr.forEach((cat)=>{
         valueObj = {

@@ -1,7 +1,9 @@
 import React, { useState, useEffect} from "react";
 import { connect } from "react-redux"
 import { Back_Continue } from "./Back_Continue";
+//I: Custom component that shows back and continue buttons, based on Dialog Actions material UI components
 import { Modal_Title } from "./Modal_Title";
+//I: Custom presentational component for Dialog titles...
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogContent from "@material-ui/core/DialogContent";
@@ -68,7 +70,7 @@ export function BudgetGoal(props) {
     }
   })(Slider);
 
-  function changeSlider(event, value) {
+  function changeSlider(event, value) { //I: TODO looks like this component was not finished
     console.log(value);
   }
   const submit = e => {
@@ -90,7 +92,7 @@ export function BudgetGoal(props) {
         fullWidth={true}
         maxWidth="md"
       >
-        <Modal_Title handleClose={props.handleClose} title="Total Goal"/>
+        <Modal_Title handleClose={props.handleClose} title="Total Goal"/> {/*I: Custom component */}
   
         <DialogContent className="content">
           <Typography className="what" variant="h5">
@@ -131,7 +133,7 @@ export function BudgetGoal(props) {
               aria-label="pretto slider"
               defaultValue={0}
               onChange={(event, value) => changeSlider(event, value)}
-            />
+            /> {/*I: A styled HOC wrapping a material ui Slider component */}
             <div className="figures">
               <Typography className="spending">$0.00</Typography>
               <Typography className="budgeted">$0.00</Typography>
@@ -149,5 +151,7 @@ function mapStateToProps(state){
       
   }
 }
+//I: If we don't need mapStateToProps, we can also pass in an null or undefined to connect() so it skips that argument
+// https://react-redux.js.org/api/connect#mapstatetoprops-state-ownprops-object
 
 export default connect(mapStateToProps,{ updateBlocks })(BudgetGoal)

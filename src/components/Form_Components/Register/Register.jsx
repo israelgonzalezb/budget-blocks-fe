@@ -15,6 +15,9 @@ import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import Loader from "react-loader-spinner";
 
+// I: Very similar to the login component "../Login/Login.js", except with an additional password confirmation check
+// This is set up on the confirmPass variable with a state hook
+
 export const Register = props => {
   const [user, setUser] = useState({ email: "", password: "",first_name:"",last_name:"" });
   const [confirmPass, setConfirmPass] = useState({ confirmPassword: "" });
