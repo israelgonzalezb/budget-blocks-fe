@@ -9,6 +9,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "../App.css";
 import "./main.css";
 import { getManualTrans } from "../redux/actions/ManualActions";
+import {}
 import Loading from "./Loading";
 import { PageView } from "./google_analytics/index.js";
 import { updateExpense, setBlockHover,selectExpense, getExpenses, deleteExpense, addExpense, assignBlock, unassignExpense } from '../redux/actions/ExpenseActions'

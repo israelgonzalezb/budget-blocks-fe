@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalTitle test ModalTitle should match snapshot 1`] = `
+<div
+  className="MuiDialogTitle-root customized-dialog-title"
+>
+  <h6
+    className="MuiTypography-root MuiTypography-h6"
+  >
+    <p
+      className="MuiTypography-root customized-dialog-title MuiTypography-body1"
+    />
+  </h6>
+</div>
+`;

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dialogView3 test dialogView3 should match snapshot 1`] = `<dialogView3 />`;

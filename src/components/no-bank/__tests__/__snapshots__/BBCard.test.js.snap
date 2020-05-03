@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BBCard test BBCard should match snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-default-2 MuiPaper-outlined MuiPaper-rounded"
+>
+  <div
+    className="MuiCardContent-root"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h5"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    />
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    />
+    <div
+      className="MuiCardActions-root MuiCardActions-spacing"
+    />
+  </div>
+</div>
+`;
