@@ -1,6 +1,5 @@
 import React from "react";
 import { Register } from "../Form_Components/Register/Register";
-import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import { mount, shallow } from "enzyme";

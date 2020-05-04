@@ -1,6 +1,5 @@
 import React from "react";
 import { Login } from "../Form_Components/Login/Login";
-import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { mount, shallow } from "enzyme";
 

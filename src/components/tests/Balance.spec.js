@@ -1,10 +1,6 @@
 import React from "react";
 import { Balance } from "../Balance_Components/Balance";
-//import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
 import { shallow } from "enzyme";
-
-//configure({ adapter: new Adapter() });
 
 test("Balance renders correctly", () => {
   const wrapper = shallow(
