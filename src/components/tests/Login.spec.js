@@ -2,11 +2,7 @@ import React from "react";
 import { Login } from "../Form_Components/Login/Login";
 import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
 import { mount, shallow } from "enzyme";
-
-configure({ adapter: new Adapter() });
 
 test("Login renders correctly", () => {
   let wrapper = shallow(<Login />)

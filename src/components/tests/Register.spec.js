@@ -3,11 +3,8 @@ import { Register } from "../Form_Components/Register/Register";
 import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
-import { configure, mount, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import { mount, shallow } from "enzyme";
 import CredentialsContext from "../../contexts/CredentialsContext";
-
-configure({ adapter: new Adapter() });
 
 describe("Register page renders as expected", () => {
   const wrapper = mount(

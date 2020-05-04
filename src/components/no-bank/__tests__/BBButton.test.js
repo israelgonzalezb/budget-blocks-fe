@@ -15,5 +15,6 @@ describe('BBButton test', () => {
        />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+    // hey there...
   });
 });

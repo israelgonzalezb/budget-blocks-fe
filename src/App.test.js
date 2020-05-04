@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import { shallow, mount, render as enzymeRender } from 'enzyme';
 import { applyMiddleware, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
@@ -32,8 +30,6 @@ let loginReducer = (state = initialState, action) => {
 
 
 const store = createStore(combineReducers({ loginReducer, plaidReducer, registerReducer }), applyMiddleware(thunk, logger));
-
-configure({ adapter: new Adapter() });
 
 test('App renders correctly', () => {
   let wrapper = shallow(<App />);
