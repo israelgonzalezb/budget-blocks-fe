@@ -1,26 +1,38 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { applyMiddleware, createStore, combineReducers } from "redux";
-import thunk from "redux-thunk";
-import logger from "redux-logger";
-import { Provider } from "react-redux";
-import { reducer as loginReducer } from "./redux/reducers/LoginReducer";
-import { reducer as plaidReducer } from "./redux/reducers/PlaidReducer";
-import { reducer as registerReducer } from "./redux/reducers/RegisterReducer";
-import {reducer as blockReducer} from "./redux/reducers/BlockReducers"
-import {reducer as addTransactionReducer} from "./redux/reducers/AddTransactionReducer"
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import ReactDOM, { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core';
+import { theme } from './styles/theme_provider';
 
-const store = createStore(combineReducers({loginReducer,plaidReducer,registerReducer,blockReducer,addTransactionReducer}), applyMiddleware(thunk, logger));
+import { transitions, positions, Provider as AlertProvider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
+
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+import App from './App';
+
+import rootReducer from './redux/reducers';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.BOTTOM_CENTER,
+  timeout: 5000,
+  offset: '30px',
+  // you can also just use 'scale'
+  transition: transitions.SCALE,
+};
 
 ReactDOM.render(
   <Provider store={store}>
-      <Router>
-    <App />
+    <Router>
+      <AlertProvider template={AlertTemplate} {...options}>
+        <App />
+      </AlertProvider>
     </Router>
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
-

@@ -1,152 +1,116 @@
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by.  Make sure to delete the numbers by the end of Labs.
-
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
 # Budget Blocks
+[![Maintainability](https://api.codeclimate.com/v1/badges/48e243bd3d68a7d834b0/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/budget-blocks-fe)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/48e243bd3d68a7d834b0/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/budget-blocks-fe)
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+You can find the deployed project at [Budget Blocks](https://www.budgetblocks.org).
 
-## Badges
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/8b04e4cce9d199b72a46/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/budget-blocks-fe)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8b04e4cce9d199b72a46/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/budget-blocks-fe)
-
-## 4️⃣ Contributors
-
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
-
-|                                       [Student 1](https://github.com/)                                        |                                       [Student 2](https://github.com/)                                        |                                       [Student 3](https://github.com/)                                        |                                       [Student 4](https://github.com/)                                        |                                       [Student 5](https://github.com/)                                        |
-| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
+## Budget Blocks Team
+|                                                                                          [Adam Skoog - Team Lead](https://github.com/skooger)                                                                                          |                                                                                          [Aleksei Zaichenko - Full Stack](https://github.com/Aleksei-Zaichenko)                                                                                          |                                                                                         [Daniel McNamara - Full Stack](https://github.com/Daniel-McNamara)                                                                                          |                                     [Edward Blanciak - Full Stack](https://github.com/eddieb2)                                      |     |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-: |
+| [<img src="https://ca.slack-edge.com/ESZCHB482-W012JQ29NHH-3bdd972c908b-512" width = "200" />](https://github.com/skooger) | [<img src="https://avatars1.githubusercontent.com/u/36427914?s=460&u=ce23d9e69a1ccd6a45fcbaf556d046c26c53c1aa&v=4" width = "200" />](https://github.com/Aleksei-Zaichenko) | [<img src="https://avatars0.githubusercontent.com/u/57954981?s=88&v=4" width = "200" />](https://github.com/Daniel-McNamara) | [<img src="https://avatars0.githubusercontent.com/u/58380182?s=460&u=55201cd6228f4fc00efc332515421a72d7b40dfb&v=4" width = "200" />](https://github.com/eddieb2) |
+|                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/skooger)                                                                     |                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Aleksei-Zaichenko)                                                                     |                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Daniel-McNamara)                                                                     |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/eddieb2)                    |
+|                                              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com)                                              |                                                   [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com)                                                   |                                                          [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com)                                                          |       [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/edward-blanciak-7a78b189/)       |
 
 <br>
 <br>
 
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
+|                                                                                          [Jess Daniel - Full Stack](https://github.com/jess-daniel)                                                                                          |                                                                                          [William Ryan - Full Stack](https://github.com/William-Ryan)                                                                                          |                                                                                         [Chris Jakuc - Data Science](https://github.com/cjakuc)                                                                                          |                                     [Adriann Lefebvere - Data Science](https://github.com/aklefebvere)                                      |     |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-: |
+| [<img src="https://avatars1.githubusercontent.com/u/51868800?s=460&u=4a4e2b1d7ee8899ff6c5cc147f9a38119b099ccd&v=4" width = "200" />](https://github.com/jess-daniel) | [<img src="https://avatars2.githubusercontent.com/u/58437764?s=460&u=3971fc2c81fd31f2582aa165b6b6d93e5e806c99&v=4" width = "200" />](https://github.com/William-Ryan) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012JHY84R0-ec1444d3530f-512" width = "200" />](https://github.com/cjakuc) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012BRRNJES-860db8acc9a5-512" width = "200" />](https://github.com/eddieb2) |
+|                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jess-daniel)                                                                     |                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/William-Ryan)                                                                     |                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/cjakuc)                                                                     |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/aklefebvere)                    |
+|                                              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jess-daniel/)                                              |                                                   [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/william-ryan-34a1981a1/)                                                   |                                                          [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/chrisjakuc/)                                                          |       [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ]((https://www.linkedin.com))       |                                           |
+
+<br>
+<br>
+
+|                                                                                          [Denise Fafette - UX Designer](https://github.com/DeniseFafette)                                                                                          |                                                                                          [Nick Nyugen - IOS Developer](https://github.com/tonic2000)                                                                                          |                                                                                         [Marcus Jones - Section Lead](https://github.com)                                                                                          |                                     [Bernie Durfee - Web Director](https://github.com)                                      |     |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-: |
+| [<img src="https://ca.slack-edge.com/ESZCHB482-W012H6K959T-5617a6ff0c04-512" width = "200" />](https://github.com/DeniseFafette) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012H6RKYKX-157ac0ae3531-512" width = "200" />](https://github.com/tonic2000) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012JHSHTAN-52dc043b8f1e-512" width = "200" />](https://github.com) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012025UC9G-2ca264059e47-512" width = "200" />](https://github.com) |
+|                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/DeniseFafette)                                                                     |                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/tonic2000)                                                                     |                                                                     [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com)                                                                     |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com)                    |
+|                                              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com)                                              |                                                   [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com)                                                   |                                                          [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com)                                                          |       [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ]([https://www.linkedin.com/in/edward-blanciak-7a78b189/](https://www.linkedin.com))       |                                           |
+
+<br>
+<br>
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
+![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+more info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
-[Trello Board] https://trello.com/b/emmxnHtH/labs-20-budget-blocks
+[Trello ](https://trello.com/b/2hhbnNHk/labs24-budget-blocks)
 
-[Product Canvas] https://www.notion.so/Budget-Blocks-6251cc75b71c4988af56529409f6f07f
+[Notion](https://www.notion.so/Budget-Blocks-6251cc75b71c4988af56529409f6f07f)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+### Figma Design Files
 
-🚫 Replace lorem ipsum with a description of your project
+[General Link](https://www.figma.com/file/vGYGHts4LZe2xJKf6oeHj0/Budget-Blocks-Denise?node-id=179%3A1)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+[Developer Onboarding](https://www.figma.com/file/vGYGHts4LZe2xJKf6oeHj0/Budget-Blocks-Denise?node-id=166%3A11)
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+[Information Architecture](https://www.figma.com/file/vGYGHts4LZe2xJKf6oeHj0/Budget-Blocks-Denise?node-id=322%3A51)
 
+[Task Flows](https://www.figma.com/file/vGYGHts4LZe2xJKf6oeHj0/Budget-Blocks-Denise?node-id=322%3A22)
 
-### 4️⃣ Key Features
+[Typography](https://www.figma.com/file/vGYGHts4LZe2xJKf6oeHj0/Budget-Blocks-Denise?node-id=395%3A290)
 
--    feature one
--    feature two
--    feature three
--    feature four
--    feature five
+[Fintech Inspiration](https://www.figma.com/file/vGYGHts4LZe2xJKf6oeHj0/Budget-Blocks-Denise?node-id=290%3A0)
 
-## 1️⃣ Tech Stack
+### Mission Statement
 
-### Front end built using:
+#### Our mission is to create a budgeting application that makes budgeting a simple, friendly, and intuitive process for our users. Many budgeting apps face the problem of being over complicated or underwhelming, we want our users to feel like their being helped rather then put to work. Above all us we want our users feel the weight lightened by our application in their pursuit to budget their income rather then be overwhelmed by it. 
 
-#### _Front end framework goes here_
+### Key Features
 
-🚫 Why did you choose this framework?
+- Ability to sign up and connect via Okta
+- Ability to connect their bank accounts through Plaid API
+- Custom categories based on the preferences and needs of the users
+- Automated or Manual process of checking and handling their budgeting process
+- Information and suggestions on budgeting based off of users demographic and goals
 
--    point one
--    point two
--    point three
--    point four
+## Tech Stack
 
-🚫List the rest of the front end features and libraries in the same format as the framework above.
+### Front-End built using:
 
-#### Front end deployed to `🚫insert service here`
+#### React, Redux, Okta, Axios, Dotenv
 
-#### [Back end](🚫link to back end repo here) built using:
+Why did you choose this framework?
 
-#### 🚫 back end framework goes here
+- React is a diverse and varied front-end framework with multiple intuitive dependencies/hooks that make for a not only clean but effective front-end codebase.
+- Redux is a flexible and efficient stage management framework that allows a front-end developer to not only distribute state freely across their application but also gives them the freedom to customize how it may be rendered. 
+- Okta is being used to be on par with engineering standards. It's the latest in safe and secure sign up/sign in processing as well as authentication. It is also built in with a number of useful features for the user to recover and update their information as needed. 
+- Axios is the dependency we choose for accessing API endpoints on the front-end through GET, POST, PUT, and DELETE requests.
+- Dotenv is what was used to store sensitive information that only our developers should be aware of and have access to for the security of our application.
 
--    point one
--    point two
--    point three
+#### Front end deployed through Netlify
 
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
-
-# APIs
-
-## 2️⃣ Authentication API here
-
-🚫Replace text below with a description of the API
-
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
-
-## 2️⃣ Payment API here
-
-🚫Replace text below with a description of the API
-
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-Volunteering your time; it pays you and your whole community fantastic dividends. Maybe there's a happy little waterfall happening over here. You can spend all day playing with mountains. We don't have to be committed. We are just playing here. You have freedom here. The only guide is your heart. It's cold, but it's beautiful.
-
-# 3️⃣ Environment Variables
-
-In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
-
-    *  REACT_APP_PUBLIC_KEY - key given to our budget blocks account from plaid for use of plaid API.
-
-# 5️⃣ Content Licenses
-
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
+# Content Licenses
 
 | Image Filename | Source / Creator | License                                                                      |
 | -------------- | ---------------- | ---------------------------------------------------------------------------- |
 | doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
 | rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
 
-# 4️⃣ Testing
+## Testing
 
-🚫Document what you used for testing and why
+### Tech Used:
 
-# 4️⃣ Installation Instructions
+#### Jest
 
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+- Jest is what we choose to use for our front-end testing because React has built in connections for Jest's testing library, Because of this we are to effectively create tests with little to no doubt in its accuracy with the results.
 
-## Other Scripts
+# Start-Up Instructions
 
-🚫replace these examples with your own
+#### Step 1 - Clone down front-end repo
 
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+#### Step 2 - npm install from root
+
+#### Step 3 - npm start for local hosting
 
 # Contributing
 
@@ -155,12 +119,13 @@ When contributing to this repository, please first discuss the change you wish t
 Please note we have a [code of conduct](./CODE_OF_CONDUCT.md). Please follow it in all your interactions with the project.
 
 ## Issue/Bug Request
-   
- **If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
- - Check first to see if your issue has already been reported.
- - Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
- - Create a live example of the problem.
- - Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes,  where you believe the issue is originating from, and any potential solutions you have considered.
+
+**If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
+
+- Check first to see if your issue has already been reported.
+- Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
+- Create a live example of the problem.
+- Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes, where you believe the issue is originating from, and any potential solutions you have considered.
 
 ### Feature Requests
 
@@ -183,7 +148,3 @@ Remember that this project is licensed under the MIT license, and by submitting 
 ### Attribution
 
 These contribution guidelines have been adapted from [this good-Contributing.md-template](https://gist.github.com/PurpleBooth/b24679402957c63ec426).
-
-## Documentation
-
-See [Backend Documentation](🚫_link to your backend readme here_) for details on the backend of our project.
