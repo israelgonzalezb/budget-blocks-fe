@@ -1,4 +1,5 @@
 import { axiosWithAuth } from "../../components/AxiosWithAuth";
+import environmentUrls from "../../dispatch";
 
 export const SEND_LINK_TOKEN_LOADING = "SEND_LINK_TOKEN_LOADING";
 export const SEND_LINK_TOKEN_SUCCESS = "SEND_LINK_TOKEN_SUCCESS";
@@ -32,13 +33,15 @@ export const getTransFailed = error => ({
 });
 
 export function sendLinkToken(token, userID) {
+  // This function is used in LinkAccount.js
+  // When signing in their bank account is successful this function will run to give back end the plaid token to set up categories and transactions for the user.
   return function(dispatch) {
     dispatch(sendLinkLoading());
     return axiosWithAuth()
-      .post(
-        "https://cors-anywhere.herokuapp.com/https://lambda-budget-blocks.herokuapp.com/plaid/token_exchange",
-        { publicToken: token, userid: userID }
-      )
+      .post(`${environmentUrls.plaid}/token_exchange`, {
+        publicToken: token,
+        userid: userID
+      })
       .then(response => {
         dispatch(sendLinkSuccess(response.data));
         dispatch(sendLoginSuccess());
@@ -50,12 +53,13 @@ export function sendLinkToken(token, userID) {
 }
 
 export function getTransactions(userID) {
+  // This function is used on Dashboard.js to get categories and their transactions
+  // back end may return status 300 or 330 meaning that data is not ready for use
+  // if that is the case: wait 5 seconds and try calling back end again
   return function(dispatch) {
     dispatch(getTransLoading());
     return axiosWithAuth()
-      .get(
-        `https://cors-anywhere.herokuapp.com/https://lambda-budget-blocks.herokuapp.com/plaid/transactions/${userID}`
-      )
+      .get(`${environmentUrls.plaid}/transactions/${userID}`)
       .then(response => {
         dispatch(getTransSuccess(response.data));
       })

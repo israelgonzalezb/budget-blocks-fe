@@ -19,22 +19,49 @@
 /* navbar */
 .nav-bar {
 	display: flex;
-	width: 100%;
-	background-color: rgb(111, 198, 198);
+	flex-direction: row;
+	width: 99vh;
+	height: 8vh;
 }
 .nav-logo {
 	display: flex;
-	flex-direction: column;
-	width: 100%;
-	align-items: flex-start;
-	margin-left: 100px;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-basis: 200px;
+	width: 50%;
+	align-items: center;
+	margin-left: 39px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
+
+.nav-logo:hover { 
+	transform: translateY(-3px); 
+}
+
 .nav-action {
-	width: 10%;
-	margin-top: 50px;
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border-right: none;
+	align-items: flex-end;
 }
+
 .image {
-	width: 10%;
+	width: 2.5rem;
+	margin-right: 7px;
+}
+
+.heading {
+    width: 7.5rem;
+	height: 1.1rem;
+	margin-right: 3px;
+	margin-top: 5px;
+}
+
+.dropdown-menu {
+	float: right;
+	margin-right: 2%;
 }
 
 /* phone screen */

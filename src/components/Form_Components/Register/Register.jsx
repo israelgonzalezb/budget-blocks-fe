@@ -1,188 +1,65 @@
 import React, { useState, useEffect } from "react";
+
 import { connect } from "react-redux";
 import { registerUser } from "../../../redux/actions/RegisterActions";
 import Title from "../Title";
-import PasswordField from "../PasswordField";
-import Account from "../Account";
-import { CheckEmptyFields } from "../CheckEmpyFields";
-import { ChangeCheckField } from "../ChangeCheckField";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button";
-import "./registerStyle.css";
-import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import Loader from "react-loader-spinner";
+import RegForm from "./form";
+import { default_user, default_values } from "./defaults";
+import handlers from "./handlers";
+import { useContext } from "react";
+import CredentialsContext from "../../../contexts/CredentialsContext";
 
-export const Register = props => {
-  const [user, setUser] = useState({ email: "", password: "",first_name:"",last_name:"" });
-  const [confirmPass, setConfirmPass] = useState({ confirmPassword: "" });
-  const [values, setValues] = useState({
-    password: {
-      error: false,
-      helperText: ""
-    },
-    email: {
-      error: false,
-      helperText: ""
-    },
-    first_name: {
-      error: false,
-      helperText: ""
-    },
-    last_name: {
-      error: false,
-      helperText: ""
-    },
-    button: {
-      disabled: false
-    }
+import { PageView } from "../../google_analytics/index.js";
+
+import Container from "@material-ui/core/Container";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import "./registerStyle.css";
+
+/**
+ * `Register` is a convenience wrapper
+ * around several components that comprise
+ * the new user registration form.
+ * @param {Object} props React component props
+ * @returns <div className="register" .../>
+ */
+export const Register = (props) => {
+  // const { updateCredentials } = useContext(CredentialsContext);
+
+  const [state, setState] = useState({
+    user: { ...default_user },
+    values: { ...default_values },
+    confirmPass: { confirmPassword: "" },
   });
 
-  const handleChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-    setValues(ChangeCheckField(e, values));
-  };
-
-  const handleConfirm = e => {
-    setValues({
-      ...values,
-      password: {
-        error: false,
-        helperText: ``
-      }
-    });
-
-    setConfirmPass({ ...confirmPass, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    const check = CheckEmptyFields(user, values);
-    if (check instanceof Object) {
-      setValues({ ...check });
-    } else if (confirmPass.confirmPassword !== user.password) {
-      setValues({
-        ...values,
-        password: {
-          error: true,
-          helperText: `Password Mismatch`
-        }
-      });
-    } else {
-      props.registerUser(user, props.history);
-      setUser({ email: "", password: "",first_name:"",last_name:"" });
-      setConfirmPass({ confirmPassword: "" });
-      setValues({
-        ...values,
-        password: {
-          error: false,
-          helperText: ``
-        }
-      });
-    }
-  };
-
   useEffect(() => {
-    if (values.password.error === false && values.email.error === false) {
-      setValues({ ...values, button: { disabled: false } });
-    } else {
-      setValues({ ...values, button: { disabled: true } });
-    }
-  }, [user]);
+    PageView();
+  }, []);
+
+  const canSubmit = () => {
+    const vals = Object.keys(state.values).filter((key) =>
+      Object.keys(state.values[key]).includes("error")
+    );
+    const errs = vals.filter((value) => state.values[value].error === true);
+  };
+
+  const handleSubmit = (e) =>
+    handlers.handleSubmit({ e, state, setState, props });
+  const handleConfirm = (e) => handlers.handleConfirm({ e, state, setState });
+  const handleUserChange = (e) =>
+    handlers.handleUserChange({ e, state, setState, canSubmit });
+
   return (
-    <div className="register">
+    <div>
       <Container maxWidth="sm">
-        <div style={{ backgroundColor: "#ffffff" }}>
-          <Title title="Sign Up" />
-
-          <form className="RegisterForm" onSubmit={handleSubmit}>
-            <FormControl variant="outlined">
-              <Typography className="label">Email Address</Typography>
-              <TextField
-                id="outlined-basic"
-                placeholder="Email Address"
-                variant="outlined"
-                type="email"
-                name="email"
-                helperText={values.email.helperText}
-                onChange={handleChange}
-                value={user.email}
-                error={values.email.error}
-              />
-              <Typography className="label">First Name</Typography>
-
-              <TextField
-                id="outlined-basic"
-                placeholder="First Name"
-                variant="outlined"
-                type="text"
-                name="first_name"
-                helperText={values.first_name.helperText}
-                onChange={handleChange}
-                value={user.first_name}
-                error={values.first_name.error}
-              />
-                            <Typography className="label">Last Name</Typography>
-
-              <TextField
-                id="outlined-basic"
-                placeholder="Last Name"
-                variant="outlined"
-                type="text"
-                name="last_name"
-                helperText={values.last_name.helperText}
-                onChange={handleChange}
-                value={user.last_name}
-                error={values.last_name.error}
-              />
-              <PasswordField
-                name="password"
-                placeholder="Password"
-                label="Password"
-                error={values.password.error}
-                value={user.password}
-                handleChange={handleChange}
-                helperText={values.password.helperText}
-              />
-
-              <PasswordField
-                name="confirmPassword"
-                placeholder="Confirm Password"
-                label="Confirm Password"
-                error={values.password.error}
-                value={confirmPass.confirmPassword}
-                handleChange={handleConfirm}
-              />
-              <Account message="Already have an account?" link="/login" />
-              {props.error ? (
-                <p style={{ display: "inline" }} className="errorMessage">
-                  {props.error}
-                </p>
-              ) : (
-                <p className="errorMessage"></p>
-              )}
-              <Button
-                variant="outlined"
-                className="signUpBtn"
-                type="submit"
-                disabled={values.button.disabled}
-              >
-                {props.isFetching ? (
-                  <Loader
-                    type="Puff"
-                    color="#00BFFF"
-                    height={50}
-                    width={50}
-                    timeout={10000} //3 secs
-                  />
-                ) : (
-                  <p>SignUp</p>
-                )}
-              </Button>
-            </FormControl>
-          </form>
+        <div className="register" style={{ backgroundColor: "#ffffff" }}>
+          <Title title="Create Profile" />
+          <RegForm
+            rProps={props}
+            rState={state}
+            rConfirm={handleConfirm}
+            rSubmit={handleSubmit}
+            rUserChange={handleUserChange}
+          />
         </div>
       </Container>
     </div>
@@ -192,7 +69,7 @@ export const Register = props => {
 function mapStateToProps(state) {
   return {
     isFetching: state.registerReducer.isFetching,
-    error: state.registerReducer.error
+    error: state.registerReducer.error,
   };
 }
 

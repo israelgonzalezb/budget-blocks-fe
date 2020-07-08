@@ -1,9 +1,11 @@
-import React, { useState,useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import { connect } from 'react-redux';
-import { axiosWithAuth } from "./AxiosWithAuth"
-import DemomanualBlocks from './Modal_Components/demomanualBlocks';
+import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import { connect } from "react-redux";
+import { useAxiosWithAuth } from '../hooks'
+import ManualTransaction from "./Modal_Components/ManualTransaction";
+import environmentUrls from "../dispatch";
+
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
@@ -15,32 +17,39 @@ function getModalStyle() {
   return {
     top: `${top}%`,
     left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
+    transform: `translate(-${top}%, -${left}%)`
   };
 }
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    position: 'absolute',
-    
+    position: "absolute",
+
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: "2px solid #000",
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
+    padding: theme.spacing(2, 4, 3)
+  }
 }));
 
 function AddManualBlocks(props) {
+  // This component displays the modal to create a new block
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  const [blocks,setBlocks] = useState([])
+  const [blocks, setBlocks] = useState([]);
+
+  const { axiosData } = useAxiosWithAuth(
+      `${environmentUrls.base_url}/api/users/categories/${props.userID}`,
+      'get'
+    )
+
   useEffect(() => {
-    
-    axiosWithAuth().get(`https://lambda-budget-blocks.herokuapp.com/api/users/categories/${props.userID}`)
-    .then(i => setBlocks(i.data))
-    },[])
+    setBlocks(axiosData)
+  }, [axiosData])
+
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -49,10 +58,9 @@ function AddManualBlocks(props) {
     setOpen(false);
   };
 
-
   return (
     <div>
-      <button onClick={handleOpen} className='blocks-button'>
+      <button onClick={handleOpen} className="blocks-button">
         Add Manual Blocks
       </button>
       <Modal
@@ -62,19 +70,25 @@ function AddManualBlocks(props) {
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-        <DemomanualBlocks open={true} handleClose={handleClose} blocks={blocks} history={props.history}/>
+          <ManualTransaction
+            open={true}
+            handleClose={handleClose}
+            blocks={blocks}
+            history={props.history}
+          />
         </div>
       </Modal>
     </div>
   );
 }
+
 function mapStateToProps(state) {
-	return {
-		userID: state.loginReducer.user.id,
-		LinkedAccount: state.loginReducer.user.LinkedAccount,
-        blocks: state.plaidReducer.categories,
-        categories:state.plaidReducer.categories
-	};
+  return {
+    userID: state.loginReducer.user.id,
+    LinkedAccount: state.loginReducer.user.LinkedAccount,
+    blocks: state.plaidReducer.categories,
+    categories: state.plaidReducer.categories
+  };
 }
 
 export default connect(mapStateToProps, { AddManualBlocks })(AddManualBlocks);
