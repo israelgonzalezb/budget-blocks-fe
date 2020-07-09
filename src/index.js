@@ -40,6 +40,8 @@ Sentry.init({
   dsn: process.env.SENTRY_DSN,
 });
 
+console.log(process.env)
+
 ReactDOM.render(
   <Provider store={store}>
     <Router>
